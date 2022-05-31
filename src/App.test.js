@@ -1,8 +1,55 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("site navigation via navbar", () => {
+	test("to keyboard catalogue and then to homepage", () => {
+		render(<App />);
+
+		const keyboards = screen.getByRole("link", { name: /keyboard/i });
+		userEvent.click(keyboards);
+
+		const keyboardHeader = screen.getByRole("heading", { name: /keyboards/i });
+		expect(keyboardHeader).toBeInTheDocument();
+
+		const homepage = screen.getByRole("link", { name: /keyup/i });
+		userEvent.click(homepage);
+
+		const homepageHeader = screen.getByRole("heading", { name: /homepage/i });
+		expect(homepageHeader).toBeInTheDocument();
+	});
+
+	test("to switches catalogue and then keyboard catalogue", () => {
+		render(<App />);
+
+		const switches = screen.getByRole("link", { name: /switches/i });
+		userEvent.click(switches);
+
+		const switchesHeader = screen.getByRole("heading", { name: /switches/i });
+		expect(switchesHeader).toBeInTheDocument();
+
+		const keyboards = screen.getByRole("link", { name: /keyboard/i });
+		userEvent.click(keyboards);
+
+		const keyboardHeader = screen.getByRole("heading", { name: /keyboards/i });
+		expect(keyboardHeader).toBeInTheDocument();
+	});
+
+	test("to accessories catalogue and then to switches", () => {
+		render(<App />);
+
+		const accessories = screen.getByRole("link", { name: /accessories/i });
+		userEvent.click(accessories);
+
+		const accessoriesHeader = screen.getByRole("heading", {
+			name: /accessories/i,
+		});
+		expect(accessoriesHeader).toBeInTheDocument();
+
+		const switches = screen.getByRole("link", { name: /switches/i });
+		userEvent.click(switches);
+
+		const switchesHeader = screen.getByRole("heading", { name: /switches/i });
+		expect(switchesHeader).toBeInTheDocument();
+	});
 });
