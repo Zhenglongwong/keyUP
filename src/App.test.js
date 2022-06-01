@@ -1,10 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
+import InventoryContextProvider from "./context/Inventory";
 
 describe("site navigation via navbar", () => {
 	test("to keyboard catalogue and then to homepage", () => {
-		render(<App />);
+		render(
+			<InventoryContextProvider>
+				<App />
+			</InventoryContextProvider>
+		);
 
 		const keyboards = screen.getByRole("link", { name: /keyboard/i });
 		userEvent.click(keyboards);
@@ -20,7 +25,11 @@ describe("site navigation via navbar", () => {
 	});
 
 	test("to switches catalogue and then keyboard catalogue", () => {
-		render(<App />);
+		render(
+			<InventoryContextProvider>
+				<App />
+			</InventoryContextProvider>
+		);
 
 		const switches = screen.getByRole("link", { name: /switches/i });
 		userEvent.click(switches);
@@ -36,7 +45,11 @@ describe("site navigation via navbar", () => {
 	});
 
 	test("to accessories catalogue and then to switches", () => {
-		render(<App />);
+		render(
+			<InventoryContextProvider>
+				<App />
+			</InventoryContextProvider>
+		);
 
 		const accessories = screen.getByRole("link", { name: /accessories/i });
 		userEvent.click(accessories);
