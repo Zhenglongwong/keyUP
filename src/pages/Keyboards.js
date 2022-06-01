@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Catalogue from '../components/Catalogue';
+
 const Keyboards = () => {
 	return (
 		<>
