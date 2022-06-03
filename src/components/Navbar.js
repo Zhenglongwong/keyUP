@@ -32,6 +32,7 @@ export default function HideAppBar(props) {
 							<Link to="/Keyboards">Keyboards</Link>
 							<Link to="/Switches">Switches</Link>
 							<Link to="/Accessories">Accessories</Link>
+							<Link to="/Cart">Cart</Link>
 						</Typography>
 					</Toolbar>
 				</AppBar>

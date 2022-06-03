@@ -4,6 +4,7 @@ import Accessories from "./pages/Accessories";
 import Keyboards from "./pages/Keyboards";
 import Switches from "./pages/Switches";
 import Product from "./pages/Product"
+import Cart from "./pages/Cart"
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 					<Route path="/Switches" element={<Switches />} />
 					<Route path="/Keyboards" element={<Keyboards />} />
 					<Route path="/Product/:id" element={<Product />} />
+					<Route path="/Cart" element={<Cart />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
