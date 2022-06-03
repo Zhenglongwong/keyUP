@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar";
-import Catalogue from "../components/Catalogue";
+import ProductGrid from "../components/ProductGrid";
 
 const Homepage = () => {
 	return (
 		<>
 			<Navbar />
 			<h1>Homepage</h1>
-			<Catalogue type="Featured" />
+			<ProductGrid category="Featured" />
 		</>
 	);
 };

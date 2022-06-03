@@ -1,10 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import Accessories from "./pages/Accessories";
-import Keyboards from "./pages/Keyboards";
-import Switches from "./pages/Switches";
 import Product from "./pages/Product"
 import Cart from "./pages/Cart"
+import Catalogue from "./pages/Catalogue"
 import "./App.css";
 
 function App() {
@@ -13,9 +11,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Homepage />} />
-					<Route path="/Accessories" element={<Accessories />} />
-					<Route path="/Switches" element={<Switches />} />
-					<Route path="/Keyboards" element={<Keyboards />} />
+					<Route path="/Catalogue/:category" element={<Catalogue />}/> 
 					<Route path="/Product/:id" element={<Product />} />
 					<Route path="/Cart" element={<Cart />} />
 				</Routes>

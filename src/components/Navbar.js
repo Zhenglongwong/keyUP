@@ -29,9 +29,9 @@ export default function HideAppBar(props) {
 					<Toolbar>
 						<Typography variant="h6" component="div">
 							<Link to="/">KeyUP</Link>
-							<Link to="/Keyboards">Keyboards</Link>
-							<Link to="/Switches">Switches</Link>
-							<Link to="/Accessories">Accessories</Link>
+							<Link to="/Catalogue/Keyboards">Keyboards</Link>
+							<Link to="/Catalogue/Switches">Switches</Link>
+							<Link to="/Catalogue/Accessories">Accessories</Link>
 							<Link to="/Cart">Cart</Link>
 						</Typography>
 					</Toolbar>
