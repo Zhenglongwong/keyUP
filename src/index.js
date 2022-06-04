@@ -1,17 +1,42 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@emotion/react";
 import "./index.css";
 import App from "./App";
 import InventoryContextProvider from "./context/Inventory";
 import { CartContextProvider } from "./context/Cart";
 
+
+const theme = createTheme({
+	palette: {
+		type: "light",
+		primary: {
+			main: "#FFC300",
+			light: "#FFD60A",
+		},
+		secondary: {
+			main: "#003566",
+		},
+		background: {
+			default: "#001D3D",
+			paper: "#000814",
+		},
+		text: {
+			primary: "#f5f5f5",
+		},
+	},
+});
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	// <React.StrictMode>
-		<CartContextProvider>
-			<InventoryContextProvider>
+	<CartContextProvider>
+		<InventoryContextProvider>
+			<ThemeProvider theme={theme}>
 				<App />
-			</InventoryContextProvider>
-		</CartContextProvider>
+			</ThemeProvider>
+		</InventoryContextProvider>
+	</CartContextProvider>
 	// </React.StrictMode>
 );

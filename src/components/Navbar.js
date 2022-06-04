@@ -6,6 +6,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
+
+
 
 function HideOnScroll(props) {
 	const { children, window } = props;
@@ -25,14 +28,22 @@ export default function HideAppBar(props) {
 		<React.Fragment>
 			<CssBaseline />
 			<HideOnScroll {...props}>
-				<AppBar>
+				<AppBar sx={{background: "#FFD60A"}}>
 					<Toolbar>
 						<Typography variant="h6" component="div">
-							<Link to="/">KeyUP</Link>
-							<Link to="/Catalogue/Keyboards">Keyboards</Link>
-							<Link to="/Catalogue/Switches">Switches</Link>
-							<Link to="/Catalogue/Accessories">Accessories</Link>
-							<Link to="/Cart">Cart</Link>
+							<Link to="/" style={{ textDecoration: 'none' }}>KeyUP</Link>
+							<Button size="large">
+								<Link to="/Catalogue/Keyboards" style={{ textDecoration: 'none'}}>Keyboards</Link>
+							</Button>
+							<Button size="large">
+								<Link to="/Catalogue/Switches" style={{ textDecoration: 'none' }}>Switches</Link>
+							</Button>
+							<Button size="large">
+								<Link to="/Catalogue/Accessories" style={{ textDecoration: 'none' }}>Accessories</Link>
+							</Button>
+							<Button size="large">
+								<Link to="/Cart" style={{ textDecoration: 'none' }}>Cart</Link>
+							</Button>
 						</Typography>
 					</Toolbar>
 				</AppBar>
