@@ -24,6 +24,7 @@ const Homepage = () => {
 						left: "5vw",
 						background: "rgba(255,255,255,.1)",
 						backdropFilter: "blur(10px)",
+						borderRadius: ".5rem",
 						height: '20vh',
 						padding: "1rem"
 					}}
@@ -33,7 +34,7 @@ const Homepage = () => {
 					<Button sx={{margin: "1rem"}} variant="contained">Explore Products</Button>
 				</Card>
 			</Box>
-			<h1>Homepage</h1>
+			<h1>Featured</h1>
 			<ProductGrid category="Featured" />
 		</>
 	);

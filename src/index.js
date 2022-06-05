@@ -12,18 +12,18 @@ const theme = createTheme({
 	palette: {
 		type: "light",
 		primary: {
-			main: "#FFC300",
+			main: "#89253e",
 			light: "#FFD60A",
 		},
 		secondary: {
-			main: "#003566",
+			main: "#3a6186",
 		},
 		background: {
-			default: "#001D3D",
+			default: "#FFF",
 			paper: "#000814",
 		},
 		text: {
-			primary: "#f5f5f5",
+			primary: "#FFF",
 		},
 	},
 });

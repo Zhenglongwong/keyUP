@@ -28,21 +28,21 @@ export default function HideAppBar(props) {
 		<React.Fragment>
 			<CssBaseline />
 			<HideOnScroll {...props}>
-				<AppBar sx={{background: "#FFD60A"}}>
+				<AppBar sx={{background: "#89253e"}}>
 					<Toolbar>
 						<Typography variant="h6" component="div">
-							<Link to="/" style={{ textDecoration: 'none' }}>KeyUP</Link>
+							<Link to="/" style={{ textDecoration: 'none',  color: '#F5EBE9'  }}>KeyUP</Link>
 							<Button size="large">
-								<Link to="/Catalogue/Keyboards" style={{ textDecoration: 'none'}}>Keyboards</Link>
+								<Link to="/Catalogue/Keyboards" style={{ textDecoration: 'none', color: '#F5EBE9' }}>Keyboards</Link>
 							</Button>
 							<Button size="large">
-								<Link to="/Catalogue/Switches" style={{ textDecoration: 'none' }}>Switches</Link>
+								<Link to="/Catalogue/Switches" style={{ textDecoration: 'none', color: '#F5EBE9'  }}>Switches</Link>
 							</Button>
 							<Button size="large">
-								<Link to="/Catalogue/Accessories" style={{ textDecoration: 'none' }}>Accessories</Link>
+								<Link to="/Catalogue/Accessories" style={{ textDecoration: 'none', color: '#F5EBE9'  }}>Accessories</Link>
 							</Button>
 							<Button size="large">
-								<Link to="/Cart" style={{ textDecoration: 'none' }}>Cart</Link>
+								<Link to="/Cart" style={{ textDecoration: 'none',  color: '#F5EBE9' }}>Cart</Link>
 							</Button>
 						</Typography>
 					</Toolbar>
