@@ -7,6 +7,7 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
+import CartDrawer from "./CartDrawer/Index.js";
 
 
 
@@ -44,6 +45,7 @@ export default function HideAppBar(props) {
 							<Button size="large">
 								<Link to="/Cart" style={{ textDecoration: 'none',  color: '#F5EBE9' }}>Cart</Link>
 							</Button>
+							<CartDrawer />
 						</Typography>
 					</Toolbar>
 				</AppBar>
