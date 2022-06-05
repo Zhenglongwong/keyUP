@@ -4,7 +4,7 @@ import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
 import "./index.css";
 import App from "./App";
-import InventoryContextProvider from "./context/Inventory";
+import { InventoryContextProvider } from "./context/Inventory.js";
 import { CartContextProvider } from "./context/Cart";
 
 
